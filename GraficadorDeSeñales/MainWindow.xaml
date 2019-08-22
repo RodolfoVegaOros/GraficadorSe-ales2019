@@ -21,10 +21,13 @@
         <TextBox x:Name="txt_fase" HorizontalAlignment="Left" Height="23" Margin="97,75,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="74"/>
         <TextBox x:Name="txt_frecuencia" HorizontalAlignment="Left" Height="23" Margin="97,105,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="74"/>
         <TextBox x:Name="txt_tiempo_inicial" HorizontalAlignment="Left" Height="23" Margin="381,45,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="1.027,0.261" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tiempo_final" HorizontalAlignment="Left" Height="23" Margin="381,80,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120" RenderTransformOrigin="1.149,0.478" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tiempo_Final" HorizontalAlignment="Left" Height="23" Margin="381,80,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120" RenderTransformOrigin="1.149,0.478" Grid.ColumnSpan="2"/>
         <Button x:Name="btn_graficar" Content="Graficar" HorizontalAlignment="Left" Margin="131,83,0,0" VerticalAlignment="Top" Width="55" Height="20" FontSize="10" RenderTransformOrigin="4.855,1.4" Grid.Column="1" Click="Btn_graficar_Click"/>
         <ScrollViewer Height="257" VerticalAlignment="Top" Margin="0,162,0,0" Grid.ColumnSpan="2" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled">
-            <Polyline Stroke="CornflowerBlue" StrokeThickness="2" Name="plnGrafica"/>
+            <Grid>
+                <Polyline Stroke="CornflowerBlue" StrokeThickness="2" Name="plnGrafica"/></Polyline>
+                <Polyline Stroke="Black" StrokeThickness="1" Name="polyX"/>
+            </Grid>
         </ScrollViewer>
         <TextBlock HorizontalAlignment="Left" Margin="219,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Frecuencia de muestreo"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
         <TextBox x:Name="txt_frecuencia_de_muestreo" HorizontalAlignment="Left" Height="23" Margin="381,119,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>

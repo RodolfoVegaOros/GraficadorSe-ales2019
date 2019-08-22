@@ -43,7 +43,7 @@ namespace GraficadorDeSeñales
             double tiempoInicial =
                 double.Parse(txt_tiempo_inicial.Text);
             double tiempoFinal =
-                double.Parse(txt_tiempo_final.Text);
+                double.Parse(tiempo_Final.Text);
             double frecuenciaMuestreo =
                 double.Parse(txt_frecuencia_de_muestreo.Text);
 
@@ -52,8 +52,26 @@ namespace GraficadorDeSeñales
             double periodoMuestreo =
                 1.0 / frecuenciaMuestreo;
             plnGrafica.Points.Clear();
-            for( double i = tiempoInicial; i <= tiempoFinal; i+= periodoMuestreo)
+            for (double i = tiempoInicial; i <= tiempoFinal; i += periodoMuestreo);
+
+            {
+                plnGrafica.Points.Add(
+                    adaptarCoordenadas(if,
+                    señal.evaluar(i), tiempoIncial));
+
+            }
+
+            polyX.Points.Clear();
+            polyX.Points.Add(
+                adaptarCoordenadas(tiempoInicial, 0.0, tiempoInicial)
+                );
+            polyX.Points.Add(
+                adaptarCoordenadas(tiempoInicial, 0.0, tiempoInicial)
+                );
+
 
         }
+        public Point adaptarCoordenadas(double x, double y, double tiempoInicial)
+
     }
 }
